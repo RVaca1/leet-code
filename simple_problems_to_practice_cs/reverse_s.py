@@ -11,20 +11,21 @@ def reverse_string_2(s):
     chars_list = []
 
 
-    len_s = len(s)
+    # for i in range(len_s):
+    #     chars_list.append(i)
+    #
+    # melhor solucao
 
-    for i in range(len_s):
-        chars_list.append(i)
+    chars_list = [''] * len(s)
 
-    idx = len_s
+    idx = len(s)
 
     for char in s:
 
         chars_list[idx -1] = char
-        if idx != 0:
-            idx -= 1
+        idx -= 1
 
-    return ''.join(str(x) for x in chars_list)
+    return ''.join(chars_list)
 
 sample_input = "frango"
 
